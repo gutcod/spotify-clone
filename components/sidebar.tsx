@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import { List, Box, Divider, Center } from "@chakra-ui/layout";
+import { List, Box, Divider } from "@chakra-ui/layout";
 import {
   MdHome,
   MdSearch,
