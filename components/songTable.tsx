@@ -13,22 +13,21 @@ const SongTable = ({ songs }) => {
     setActiveSong(activeSong || songs[0]);
     playSongs(songs);
   };
-
   return (
-    <Box bg='transparent' color='white'>
-      <Box padding='10px' marginBottom='20px'>
-        <Box marginBottom='30px'>
+    <Box bg="transparent" color="white">
+      <Box padding="10px" marginBottom="20px">
+        <Box marginBottom="30px">
           <IconButton
-            icon={<BsFillPlayFill fontSize='30px' />}
-            aria-label='play'
-            colorScheme='green'
-            size='lg'
+            icon={<BsFillPlayFill fontSize="30px" />}
+            aria-label="play"
+            colorScheme="green"
+            size="lg"
             isRound
             onClick={() => handlePlay()}
           />
         </Box>
-        <Table variant='unstyled'>
-          <Thead borderBottom='1px solid' borderColor='rgba(255,255,255,0.2)'>
+        <Table variant="unstyled">
+          <Thead borderBottom="1px solid" borderColor="rgba(255,255,255,0.2)">
             <Tr>
               <Th>#</Th>
               <Th>Title</Th>
@@ -48,8 +47,9 @@ const SongTable = ({ songs }) => {
                   },
                 }}
                 key={song.id}
-                cursor='pointer'
-                onClick={() => handlePlay(song)}>
+                cursor="pointer"
+                onClick={() => handlePlay(song)}
+              >
                 <Td>{i + 1}</Td>
                 <Td>{song.name}</Td>
                 <Td>{formatDate(song.createdAt)}</Td>

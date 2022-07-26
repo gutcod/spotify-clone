@@ -13,7 +13,7 @@ export const useMe = () => {
 export const usePlaylist = () => {
   const { data, error } = useSWR("/playlist", fetcher);
   return {
-    playlist: (data as any) || [],
+    playlists: (data as any) || [],
     isLoading: !data && !error,
     isError: error,
   };

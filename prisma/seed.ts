@@ -30,9 +30,9 @@ const run = async () => {
     update: {},
     create: {
       email: "user@test.com",
-      password: bcrypt.hashSync("password", salt),
-      firstName: "Scott",
-      lastName: "Moss",
+      password: bcrypt.hashSync("Pass1234", salt),
+      firstName: "Andrei",
+      lastName: "Gutcod",
     },
   });
 
@@ -58,6 +58,7 @@ const run = async () => {
 
 run()
   .catch((e) => {
+    // eslint-disable-next-line no-console
     console.error(e);
     process.exit(1);
   })
